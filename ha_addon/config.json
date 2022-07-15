@@ -1,0 +1,24 @@
+{
+    "slug": "edibles",
+    "name": "Edible Tracker",
+    "version": "1.0.0",
+    "stage": "stable",
+    "description": "",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "services",
+    "boot": "auto",
+    "ports": {
+      "8000/tcp": 8000
+    },
+    "ports_description": {
+      "8000/tcp": "Webservice API"
+    },
+    "map": [],
+    "options": {
+        "refresh_token": "Generate by calling 'npx -p ring-client-api ring-auth-cli' on your Mac after installing npm"
+    },
+    "schema": {
+      "refresh_token": "str"
+    }
+  }
+  
