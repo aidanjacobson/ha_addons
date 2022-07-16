@@ -37,8 +37,8 @@ function apiPostCall(path, jsonData) {
                 "Authorization": `Bearer ${process.env.SUPERVISOR_TOKEN}`
             },
             json: jsonData
-        }, function(err, res) {
-            resolve(res);
+        }, function(err, res, body) {
+            resolve(body);
         });
     });
 
