@@ -1,5 +1,7 @@
 const https = require("https");
 
+console.log("script start");
+
 async function apiPostCall(path, jsonData) {
     return new Promise(function(res, rej) {
         var data = JSON.stringify(jsonData);
