@@ -1,11 +1,11 @@
 {
     "name": "edibles",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "",
     "author": "",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "nodejs index.js"
     },
     "dependencies": {
     },
