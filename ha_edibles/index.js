@@ -2,8 +2,9 @@ const http = require("http");
 
 console.log("script start");
 
-async function apiPostCall(path, jsonData) {
-    return new Promise(function(res, rej) {
+function apiPostCall(path, jsonData) {
+    return new Promise(function(resolve, rej) {
+        console.log("POST", path)
         var data = JSON.stringify(jsonData);
         var options = {
             hostname: "supervisor",
@@ -19,7 +20,7 @@ async function apiPostCall(path, jsonData) {
 
         var req = https.request(options, function(res) {
             res.on("data", function(data) {
-                res(data);
+                resolve(data);
             });
         });
         req.on("error", function(e) {
@@ -32,6 +33,7 @@ async function apiPostCall(path, jsonData) {
 }
 
 (async function() {
+    console.log("Hi");
     console.log(await apiPostCall("/states/edibles", {
         state: {
             edibleTimes: []
