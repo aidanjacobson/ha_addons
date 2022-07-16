@@ -1,11 +1,11 @@
-const http = require("http");
+const request = require("request");
 
 console.log("script stagsertrt");
 
 function apiPostCall(path, jsonData) {
     return new Promise(function(resolve, rej) {
         console.log("POST", path)
-        var data = JSON.stringify(jsonData);
+        /*
         var options = {
             hostname: "supervisor",
             port: 80,
@@ -29,7 +29,19 @@ function apiPostCall(path, jsonData) {
         })
         req.write(data);
         req.end();
+        */
+
+        request(`http://supervisor/core/api${path}`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${process.env.SUPERVISOR_TOKEN}`
+            },
+            json: jsonData
+        }, function(err, res) {
+            resolve(res);
+        });
     });
+
 }
 
 (async function() {
