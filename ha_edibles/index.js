@@ -1,6 +1,6 @@
 const http = require("http");
 
-console.log("script start");
+console.log("script stagsertrt");
 
 function apiPostCall(path, jsonData) {
     return new Promise(function(resolve, rej) {
@@ -18,7 +18,7 @@ function apiPostCall(path, jsonData) {
             }
         }
 
-        var req = https.request(options, function(res) {
+        var req = http.request(options, function(res) {
             res.on("data", function(data) {
                 resolve(data);
             });
