@@ -12,4 +12,4 @@ RUN apk add --no-cache \
 COPY package.json /
 COPY index.js /
 RUN cd / && npm install --unsafe-perm
-CMD npm start
+CMD npm run start
