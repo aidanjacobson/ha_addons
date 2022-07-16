@@ -8,7 +8,7 @@ ADD package.json /
 
 RUN apk add --no-cache \
     nodejs \
-    nodejs-npm && npm install
+    npm && npm install
 
 COPY index.js /
 CMD ["npm", "start"]
