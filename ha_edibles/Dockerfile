@@ -4,12 +4,11 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+ADD package.json /
+
 RUN apk add --no-cache \
     nodejs \
-    npm \
-    git
+    nodejs-npm && npm install
 
-COPY package.json /
 COPY index.js /
-RUN cd / && npm install --unsafe-perm
 CMD ["npm", "start"]

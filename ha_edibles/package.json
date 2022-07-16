@@ -10,6 +10,5 @@
     "dependencies": {
         "request": "*"
     },
-    "devDependencies": {
-    }
+    "devDependencies": {}
 }
