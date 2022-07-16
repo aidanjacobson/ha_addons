@@ -12,7 +12,8 @@ async function apiPostCall(path, jsonData) {
             method: "POST",
             headers: {
                 "Content-Type:": "application/json",
-                "Content-Length": data.length
+                "Content-Length": data.length,
+                "Authorization": `Bearer ${process.env.SUPERVISOR_TOKEN}`
             }
         }
 

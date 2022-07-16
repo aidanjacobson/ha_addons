@@ -9,4 +9,4 @@ arch:
   - armhf
   - armv7
   - i386
-
+homeassistant_api: true
