@@ -1,6 +1,6 @@
 name: "Edible Tracker"
 description: ""
-version: "1.0.3"
+version: "1.0.4"
 slug: "edibles"
 init: false
 arch:
