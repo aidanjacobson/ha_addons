@@ -11,4 +11,5 @@ RUN apk add --no-cache \
     npm && npm install
 
 COPY index.js /
+COPY webroot /webroot
 CMD ["npm", "start"]
