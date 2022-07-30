@@ -10,3 +10,4 @@ arch:
   - armv7
   - i386
 homeassistant_api: true
+ingress: true
